@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NAME=esp8266-toolchain
-IMAGE_NAME=lpodkalicki/${NAME}
+IMAGE_NAME=gazzyt/${NAME}
 TOOLCHAIN_SCRIPT=${NAME}
 
 docker pull ${IMAGE_NAME}:latest

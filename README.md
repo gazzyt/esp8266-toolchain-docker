@@ -1,26 +1,26 @@
 # Overview
 
-Lightweight docker image built on top of **debian:jessie-slim** with installed xtensa toolchain, ESP8266_RTOS_SDK and few additional tools:
-* xtensa-lx106 (crosstool-NG crosstool-ng-1.22.0-92-g8facf4c; 5.2.0)
-* ESP8266_RTOS_SDK (v3.2)
+Lightweight docker image built on top of **debian:buster-slim** with installed xtensa toolchain, ESP8266_RTOS_SDK and few additional tools:
+* xtensa-lx106 (crosstool-NG crosstool-ng-1.22.0-100; 5.2.0)
+* ESP8266_RTOS_SDK (v3.3)
 * esptool.py (v2.4)
 * make (v4.2)
-* cmake (v3.5)
+* cmake (v3.13)
 
 DockerHub: https://hub.docker.com/r/lpodkalicki/esp8266-toolchain
 
 ## Building image locally
 
 ```bash
-git clone https://github.com/lpodkalicki/esp8266-toolchain-docker.git
-cd eps8266-toolchain
-docker build --rm -t lpodkalicki/esp8266-toolchain:latest .
+git clone https://github.com/gazzyt/esp8266-toolchain-docker.git
+cd esp8266-toolchain
+docker build --rm -t gazzyt/esp8266-toolchain:latest .
 ```
 
 ## An example of running toolchain binary
 
 ```bash
-docker run --rm -it --privileged -v $(pwd):/build lpodkalicki/esp8266-toolchain xtensa-lx106-elf-gcc --version
+docker run --rm -it --privileged -v $(pwd):/build gazzyt/esp8266-toolchain xtensa-lx106-elf-gcc --version
 ```
 
 # Installing
